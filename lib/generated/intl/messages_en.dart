@@ -23,20 +23,35 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "AllTransactions": MessageLookupByLibrary.simpleMessage("All Transactions"),
+    "AmountPaid": MessageLookupByLibrary.simpleMessage("Amount Paid"),
     "CurrentValue": MessageLookupByLibrary.simpleMessage("Current Value"),
     "EGP": MessageLookupByLibrary.simpleMessage("EGP"),
     "GoldIngots": MessageLookupByLibrary.simpleMessage("Gold Ingots"),
+    "GoldWeight": MessageLookupByLibrary.simpleMessage("Gold Weight"),
     "LastTransactions": MessageLookupByLibrary.simpleMessage(
       "Last Transactions",
     ),
     "NewTransaction": MessageLookupByLibrary.simpleMessage("New Transaction"),
+    "NoTransactionsYet": MessageLookupByLibrary.simpleMessage(
+      "No Transactions Yet",
+    ),
     "Profit": MessageLookupByLibrary.simpleMessage("Profit"),
+    "SaveTransaction": MessageLookupByLibrary.simpleMessage("Save Transaction"),
     "TotalPaid": MessageLookupByLibrary.simpleMessage("Total Paid"),
     "TotalTransactions": MessageLookupByLibrary.simpleMessage(
       "Total Transactions",
     ),
     "Weight": MessageLookupByLibrary.simpleMessage("Weight"),
+    "enterAmountPaid": MessageLookupByLibrary.simpleMessage("Enter amount"),
     "g": MessageLookupByLibrary.simpleMessage("g"),
+    "pleaseEnterValidNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid number",
+    ),
+    "selectGoldWeight": MessageLookupByLibrary.simpleMessage("Select gram"),
+    "selectGoldWeightAndEnterAmountYouPaid":
+        MessageLookupByLibrary.simpleMessage(
+          "Select gold weight and enter the amount you paid",
+        ),
     "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
   };
 }

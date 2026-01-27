@@ -1,4 +1,4 @@
-import 'package:calulate_gold_daily_price/core/extentions/number_localization.dart';
+import 'package:calulate_gold_daily_price/core/extensions/number_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

@@ -1,6 +1,7 @@
-import 'package:calulate_gold_daily_price/features/get_gold_ingots_price/presentation/views/get_gold_ingots_price_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../../get_gold_ingots_price/presentation/views/get_gold_ingots_price_view.dart';
+import '../../../../new_transaction/presentation/views/new_transaction_view.dart';
 import 'home_action_card.dart';
 
 class HomeQuickActions extends StatelessWidget {
@@ -32,7 +33,14 @@ class HomeQuickActions extends StatelessWidget {
         HomeActionCard(
           icon: Icons.add_circle_outline,
           title: S.of(context).NewTransaction,
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NewTransactionView(),
+              ),
+            );
+          },
         ),
       ],
     );

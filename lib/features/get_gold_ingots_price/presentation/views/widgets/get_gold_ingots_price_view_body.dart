@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-
 import '../../../../home/data/models/item_model.dart';
 import '../../manager/get_gold_ingots_cubit/get_gold_ingots_cubit.dart';
 import '../../manager/get_gold_ingots_cubit/get_gold_ingots_state.dart';
@@ -17,6 +16,12 @@ class GetGoldIngotsPriceViewBody extends StatefulWidget {
 
 class _GetGoldIngotsPriceViewBodyState
     extends State<GetGoldIngotsPriceViewBody> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<GetGoldIngotsCubit>().fetchGoldIngotsPrice();
+  }
+
   List<Product> products = [];
 
   final List<Product> fakeProducts = List.generate(

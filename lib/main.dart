@@ -1,3 +1,4 @@
+import 'package:calulate_gold_daily_price/features/get_gold_ingots_price/presentation/manager/get_gold_ingots_cubit/get_gold_ingots_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -28,7 +29,14 @@ class MyApp extends StatelessWidget {
             supportedLocales: S.delegate.supportedLocales,
             locale: state,
             debugShowCheckedModeBanner: false,
-            home: const HomeView(),
+            theme: ThemeData(
+              scaffoldBackgroundColor: Colors.white,
+              appBarTheme: const AppBarTheme(elevation: 0, color: Colors.white),
+            ),
+            home: BlocProvider(
+              create: (context) => GetGoldIngotsCubit()..fetchGoldIngotsPrice(),
+              child: const HomeView(),
+            ),
           );
         },
       ),

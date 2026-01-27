@@ -23,17 +23,33 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "AllTransactions": MessageLookupByLibrary.simpleMessage("جميع المعاملات"),
+    "AmountPaid": MessageLookupByLibrary.simpleMessage("المبلغ المدفوع"),
     "CurrentValue": MessageLookupByLibrary.simpleMessage("القيمة الحالية"),
     "EGP": MessageLookupByLibrary.simpleMessage("جنية مصري"),
     "GoldIngots": MessageLookupByLibrary.simpleMessage("سبائك الذهب"),
+    "GoldWeight": MessageLookupByLibrary.simpleMessage("وزن الذهب"),
     "LastTransactions": MessageLookupByLibrary.simpleMessage("آخر المعاملات"),
     "NewTransaction": MessageLookupByLibrary.simpleMessage("معاملة جديدة"),
+    "NoTransactionsYet": MessageLookupByLibrary.simpleMessage(
+      "لا توجد معاملات حتى الآن",
+    ),
     "Profit": MessageLookupByLibrary.simpleMessage("الربح"),
+    "SaveTransaction": MessageLookupByLibrary.simpleMessage("حفظ المعاملة"),
     "TotalPaid": MessageLookupByLibrary.simpleMessage("إجمالي المدفوعات"),
     "TotalTransactions": MessageLookupByLibrary.simpleMessage(
       "إجمالي المعاملات",
     ),
     "Weight": MessageLookupByLibrary.simpleMessage("الوزن"),
+    "enterAmountPaid": MessageLookupByLibrary.simpleMessage("أدخل المبلغ"),
     "g": MessageLookupByLibrary.simpleMessage("جرام"),
+    "pleaseEnterValidNumber": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال رقم صالح",
+    ),
+    "selectGoldWeight": MessageLookupByLibrary.simpleMessage("حدد الجرام"),
+    "selectGoldWeightAndEnterAmountYouPaid":
+        MessageLookupByLibrary.simpleMessage(
+          "حدد وزن الذهب وأدخل المبلغ الذي دفعته",
+        ),
+    "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
   };
 }

@@ -9,6 +9,14 @@
   "LastTransactions": "آخر المعاملات",
   "NewTransaction": "معاملة جديدة",
   "AllTransactions": "جميع المعاملات",
-  "View all": "عرض الكل",
-  "TotalTransactions": "إجمالي المعاملات"
+  "viewAll": "عرض الكل",
+  "TotalTransactions": "إجمالي المعاملات",
+  "selectGoldWeightAndEnterAmountYouPaid": "حدد وزن الذهب وأدخل المبلغ الذي دفعته",
+  "selectGoldWeight": "حدد الجرام",
+  "GoldWeight": "وزن الذهب",
+  "SaveTransaction": "حفظ المعاملة",
+  "AmountPaid": "المبلغ المدفوع",
+  "enterAmountPaid": "أدخل المبلغ",
+  "pleaseEnterValidNumber": "يرجى إدخال رقم صالح",
+  "NoTransactionsYet": "لا توجد معاملات حتى الآن"
 }

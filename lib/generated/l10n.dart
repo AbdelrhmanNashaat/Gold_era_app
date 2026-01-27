@@ -138,6 +138,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Select gold weight and enter the amount you paid`
+  String get selectGoldWeightAndEnterAmountYouPaid {
+    return Intl.message(
+      'Select gold weight and enter the amount you paid',
+      name: 'selectGoldWeightAndEnterAmountYouPaid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gold Weight`
+  String get GoldWeight {
+    return Intl.message('Gold Weight', name: 'GoldWeight', desc: '', args: []);
+  }
+
+  /// `Select gram`
+  String get selectGoldWeight {
+    return Intl.message(
+      'Select gram',
+      name: 'selectGoldWeight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save Transaction`
+  String get SaveTransaction {
+    return Intl.message(
+      'Save Transaction',
+      name: 'SaveTransaction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amount Paid`
+  String get AmountPaid {
+    return Intl.message('Amount Paid', name: 'AmountPaid', desc: '', args: []);
+  }
+
+  /// `Enter amount`
+  String get enterAmountPaid {
+    return Intl.message(
+      'Enter amount',
+      name: 'enterAmountPaid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid number`
+  String get pleaseEnterValidNumber {
+    return Intl.message(
+      'Please enter a valid number',
+      name: 'pleaseEnterValidNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Transactions Yet`
+  String get NoTransactionsYet {
+    return Intl.message(
+      'No Transactions Yet',
+      name: 'NoTransactionsYet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

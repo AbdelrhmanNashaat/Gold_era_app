@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../generated/l10n.dart';
-import '../manager/get_gold_ingots_cubit/get_gold_ingots_cubit.dart';
 import 'widgets/get_gold_ingots_price_view_body.dart';
 
 class GetGoldIngotsPriceView extends StatelessWidget {
@@ -23,12 +21,7 @@ class GetGoldIngotsPriceView extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SafeArea(
-        child: BlocProvider(
-          create: (context) => GetGoldIngotsCubit()..fetchGoldIngotsPrice(),
-          child: const GetGoldIngotsPriceViewBody(),
-        ),
-      ),
+      body: const SafeArea(child: GetGoldIngotsPriceViewBody()),
     );
   }
 }

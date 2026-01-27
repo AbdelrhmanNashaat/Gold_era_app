@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../../generated/l10n.dart';
-import 'widgets/all_transactions_view_body.dart';
 
-class AllTransactionView extends StatelessWidget {
-  const AllTransactionView({super.key});
+import '../../../../generated/l10n.dart';
+import 'widgets/new_transaction_view_body.dart';
+
+class NewTransactionView extends StatelessWidget {
+  const NewTransactionView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class AllTransactionView extends StatelessWidget {
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.purple),
         title: Text(
-          S.of(context).AllTransactions,
+          S.of(context).NewTransaction,
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -21,7 +22,7 @@ class AllTransactionView extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const SafeArea(child: AllTransactionsViewBody()),
+      body: const SafeArea(child: NewTransactionViewBody()),
     );
   }
 }

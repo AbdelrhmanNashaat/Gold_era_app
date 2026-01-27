@@ -10,5 +10,13 @@
   "NewTransaction": "New Transaction",
   "viewAll": "View all",
   "AllTransactions": "All Transactions",
-  "TotalTransactions": "Total Transactions"
+  "TotalTransactions": "Total Transactions",
+  "selectGoldWeightAndEnterAmountYouPaid": "Select gold weight and enter the amount you paid",
+  "GoldWeight": "Gold Weight",
+  "selectGoldWeight": "Select gram",
+  "SaveTransaction": "Save Transaction",
+  "AmountPaid": "Amount Paid",
+  "enterAmountPaid": "Enter amount",
+  "pleaseEnterValidNumber": "Please enter a valid number",
+  "NoTransactionsYet": "No Transactions Yet"
 }

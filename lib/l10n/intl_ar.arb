@@ -1,3 +1,10 @@
 {
-  "GoldIngots": "سبائك الذهب"
+  "GoldIngots": "سبائك الذهب",
+  "EGP": "جنية مصري",
+  "CurrentValue": "القيمة الحالية",
+  "Weight": "الوزن",
+  "Profit": "الربح",
+  "TotalPaid": "إجمالي المدفوعات",
+  "g": "جرام",
+  "LastTransactions": "آخر المعاملات"
 }

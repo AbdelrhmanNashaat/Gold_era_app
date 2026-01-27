@@ -1,3 +1,10 @@
 {
-  "GoldIngots": "Gold Ingots"
+  "GoldIngots": "Gold Ingots",
+  "EGP": "EGP",
+  "CurrentValue": "Current Value",
+  "Weight": "Weight",
+  "Profit": "Profit",
+  "TotalPaid": "Total Paid",
+  "g": "g",
+  "LastTransactions": "Last Transactions"
 }

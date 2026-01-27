@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'protfolio_info_item.dart';
+import '../../../../../generated/l10n.dart';
+import 'portfolio_info_item.dart';
 
 class GoldPortfolioWidget extends StatelessWidget {
   const GoldPortfolioWidget({super.key});
@@ -21,55 +22,55 @@ class GoldPortfolioWidget extends StatelessWidget {
           ),
         ],
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
             child: Column(
               children: [
                 Text(
-                  "9,000 EGP",
-                  style: TextStyle(
+                  "9,000 ${S.of(context).EGP}",
+                  style: const TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                     color: Colors.green,
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
-                  "Current Value",
-                  style: TextStyle(fontSize: 13, color: Colors.black54),
+                  S.of(context).CurrentValue,
+                  style: const TextStyle(fontSize: 13, color: Colors.black54),
                 ),
               ],
             ),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PortfolioInfoItem(
                 icon: FontAwesomeIcons.weightScale,
-                label: "Weight",
-                value: "150 g",
+                label: S.of(context).Weight,
+                value: "150 ${S.of(context).g}",
                 iconColor: Colors.amber,
               ),
               PortfolioInfoItem(
                 icon: FontAwesomeIcons.receipt,
-                label: "Total Paid",
-                value: "7,800 EGP",
+                label: S.of(context).TotalPaid,
+                value: "7,800 ${S.of(context).EGP}",
                 iconColor: Colors.blue,
               ),
             ],
           ),
 
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
 
           PortfolioInfoItem(
             icon: FontAwesomeIcons.chartLine,
-            label: "Profit",
-            value: "+1,200 EGP",
+            label: S.of(context).Profit,
+            value: "+1,200 ${S.of(context).EGP}",
             iconColor: Colors.green,
           ),
         ],

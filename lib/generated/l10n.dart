@@ -58,6 +58,51 @@ class S {
   String get GoldIngots {
     return Intl.message('Gold Ingots', name: 'GoldIngots', desc: '', args: []);
   }
+
+  /// `EGP`
+  String get EGP {
+    return Intl.message('EGP', name: 'EGP', desc: '', args: []);
+  }
+
+  /// `Current Value`
+  String get CurrentValue {
+    return Intl.message(
+      'Current Value',
+      name: 'CurrentValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weight`
+  String get Weight {
+    return Intl.message('Weight', name: 'Weight', desc: '', args: []);
+  }
+
+  /// `Profit`
+  String get Profit {
+    return Intl.message('Profit', name: 'Profit', desc: '', args: []);
+  }
+
+  /// `Total Paid`
+  String get TotalPaid {
+    return Intl.message('Total Paid', name: 'TotalPaid', desc: '', args: []);
+  }
+
+  /// `g`
+  String get g {
+    return Intl.message('g', name: 'g', desc: '', args: []);
+  }
+
+  /// `Last Transactions`
+  String get LastTransactions {
+    return Intl.message(
+      'Last Transactions',
+      name: 'LastTransactions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

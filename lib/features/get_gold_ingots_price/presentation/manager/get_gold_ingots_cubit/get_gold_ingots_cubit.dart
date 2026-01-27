@@ -1,4 +1,4 @@
-import '../../../../../utils/services/api_service.dart';
+import '../../../../../core/services/api_service.dart';
 import 'get_gold_ingots_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

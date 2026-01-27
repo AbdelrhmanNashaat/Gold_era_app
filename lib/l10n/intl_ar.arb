@@ -6,5 +6,9 @@
   "Profit": "الربح",
   "TotalPaid": "إجمالي المدفوعات",
   "g": "جرام",
-  "LastTransactions": "آخر المعاملات"
+  "LastTransactions": "آخر المعاملات",
+  "NewTransaction": "معاملة جديدة",
+  "AllTransactions": "جميع المعاملات",
+  "View all": "عرض الكل",
+  "TotalTransactions": "إجمالي المعاملات"
 }

@@ -6,5 +6,9 @@
   "Profit": "Profit",
   "TotalPaid": "Total Paid",
   "g": "g",
-  "LastTransactions": "Last Transactions"
+  "LastTransactions": "Last Transactions",
+  "NewTransaction": "New Transaction",
+  "viewAll": "View all",
+  "AllTransactions": "All Transactions",
+  "TotalTransactions": "Total Transactions"
 }

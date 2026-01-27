@@ -1,3 +1,4 @@
+import 'package:calulate_gold_daily_price/core/extentions/number_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -5,7 +6,17 @@ import '../../../../../generated/l10n.dart';
 import 'portfolio_info_item.dart';
 
 class GoldPortfolioWidget extends StatelessWidget {
-  const GoldPortfolioWidget({super.key});
+  const GoldPortfolioWidget({
+    super.key,
+    required this.currentValue,
+    required this.weight,
+    required this.totalPaid,
+    required this.profit,
+  });
+  final String currentValue;
+  final String weight;
+  final String totalPaid;
+  final String profit;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +40,7 @@ class GoldPortfolioWidget extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "9,000 ${S.of(context).EGP}",
+                  "$currentValue ${S.of(context).EGP}".localizedNumber(context),
                   style: const TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -53,13 +64,15 @@ class GoldPortfolioWidget extends StatelessWidget {
               PortfolioInfoItem(
                 icon: FontAwesomeIcons.weightScale,
                 label: S.of(context).Weight,
-                value: "150 ${S.of(context).g}",
+                value: "$weight ${S.of(context).g}".localizedNumber(context),
                 iconColor: Colors.amber,
               ),
               PortfolioInfoItem(
                 icon: FontAwesomeIcons.receipt,
                 label: S.of(context).TotalPaid,
-                value: "7,800 ${S.of(context).EGP}",
+                value: "$totalPaid ${S.of(context).EGP}".localizedNumber(
+                  context,
+                ),
                 iconColor: Colors.blue,
               ),
             ],
@@ -70,7 +83,7 @@ class GoldPortfolioWidget extends StatelessWidget {
           PortfolioInfoItem(
             icon: FontAwesomeIcons.chartLine,
             label: S.of(context).Profit,
-            value: "+1,200 ${S.of(context).EGP}",
+            value: "$profit ${S.of(context).EGP}".localizedNumber(context),
             iconColor: Colors.green,
           ),
         ],

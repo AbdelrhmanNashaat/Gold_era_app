@@ -1,10 +1,13 @@
+import 'package:calulate_gold_daily_price/core/extentions/number_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../../all_transaction/data/models/transaction_model.dart';
 import 'transaction_info.dart';
 
 class LastTransactionWidget extends StatelessWidget {
-  const LastTransactionWidget({super.key});
+  const LastTransactionWidget({super.key, required this.transactions});
+  final TransactionModel transactions;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,9 @@ class LastTransactionWidget extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                "8,500 ${S.of(context).EGP}",
+                "${transactions.money} ${S.of(context).EGP}".localizedNumber(
+                  context,
+                ),
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -52,11 +57,12 @@ class LastTransactionWidget extends StatelessWidget {
             children: [
               TransactionInfo(
                 icon: FontAwesomeIcons.weightScale,
-                text: "50 ${S.of(context).g}",
+                text: "${transactions.weight} ${S.of(context).g}"
+                    .localizedNumber(context),
               ),
-              const TransactionInfo(
+              TransactionInfo(
                 icon: FontAwesomeIcons.calendarDays,
-                text: "12 Jan 2026",
+                text: transactions.date,
               ),
             ],
           ),

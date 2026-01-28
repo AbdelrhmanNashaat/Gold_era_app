@@ -24,11 +24,11 @@ class GoldDatabase {
   Future<void> _onCreate(Database db, int version) async {
     await db.execute('''
       CREATE TABLE gold_transactions (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        buy_price REAL NOT NULL,
-        date TEXT NOT NULL
-      )
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      grams REAL NOT NULL,
+      buy_price REAL NOT NULL,
+      date TEXT NOT NULL
+    ) 
     ''');
   }
 

@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "LastTransactions": MessageLookupByLibrary.simpleMessage(
       "Last Transactions",
     ),
+    "MechanicalAndStamping": MessageLookupByLibrary.simpleMessage("Stamping"),
     "NewTransaction": MessageLookupByLibrary.simpleMessage("New Transaction"),
     "NoTransactionsYet": MessageLookupByLibrary.simpleMessage(
       "No Transactions Yet",

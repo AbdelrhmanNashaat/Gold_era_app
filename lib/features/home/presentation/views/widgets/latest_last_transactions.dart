@@ -45,7 +45,7 @@ class LatestLastTransactionsState extends State<LatestLastTransactions> {
             (ingot) => TransactionModel(
               id: ingot.id.toString(),
               money: ingot.buyPrice.toString(),
-              weight: ingot.weight,
+              weight: ingot.grams.toString(),
               date: ingot.date,
             ),
           )
@@ -91,6 +91,7 @@ class LatestLastTransactionsState extends State<LatestLastTransactions> {
               ? fakeTransactions[index]
               : transactions.reversed.take(3).toList()[index];
           return LastTransactionWidget(
+            needDelete: false,
             transactions: transaction,
             onDelete: isLoading
                 ? null

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../generated/l10n.dart';
+import '../../../../../main.dart';
 import '../../../../all_transaction/presentation/views/all_transaction_view.dart';
 import '../../../../new_transaction/data/gold_database.dart';
 import '../../../../new_transaction/data/models/gold_model.dart';
@@ -18,11 +19,23 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> with RouteAware {
   final GlobalKey<LatestLastTransactionsState> latestTransactionsKey =
       GlobalKey();
+  final GlobalKey<GetGoldPortfolioDataState> portfolioKey = GlobalKey();
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver.subscribe(this, ModalRoute.of(context)!);
+  }
+
+  @override
+  void dispose() {
+    routeObserver.unsubscribe(this);
+    super.dispose();
+  }
 
   @override
   void didPopNext() {
-    // Refresh latest transactions when coming back
     latestTransactionsKey.currentState?.refreshTransactions();
+    portfolioKey.currentState?.refreshPortfolio();
     super.didPopNext();
   }
 
@@ -48,10 +61,8 @@ class _HomeViewBodyState extends State<HomeViewBody> with RouteAware {
                 SizedBox(height: size.height * 0.02),
                 const LanguageToggleWidget(),
                 SizedBox(height: size.height * 0.03),
-                // My Gold Portfolio Title
-                const GetGoldPortfolioData(),
+                GetGoldPortfolioData(key: portfolioKey),
                 SizedBox(height: size.height * 0.03),
-                //Last Transactions Title
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -85,7 +96,7 @@ class _HomeViewBodyState extends State<HomeViewBody> with RouteAware {
                   ],
                 ),
                 SizedBox(height: size.height * 0.01),
-                const LatestLastTransactions(),
+                LatestLastTransactions(key: latestTransactionsKey),
                 SizedBox(height: size.height * 0.03),
                 const HomeQuickActions(),
                 SizedBox(height: size.height * 0.01),

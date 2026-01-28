@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "GoldIngots": MessageLookupByLibrary.simpleMessage("سبائك الذهب"),
     "GoldWeight": MessageLookupByLibrary.simpleMessage("وزن الذهب"),
     "LastTransactions": MessageLookupByLibrary.simpleMessage("آخر المعاملات"),
+    "MechanicalAndStamping": MessageLookupByLibrary.simpleMessage("الدمغة"),
     "NewTransaction": MessageLookupByLibrary.simpleMessage("معاملة جديدة"),
     "NoTransactionsYet": MessageLookupByLibrary.simpleMessage(
       "لا توجد معاملات حتى الآن",

@@ -208,6 +208,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Stamping`
+  String get MechanicalAndStamping {
+    return Intl.message(
+      'Stamping',
+      name: 'MechanicalAndStamping',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

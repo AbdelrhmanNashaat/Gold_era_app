@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<LanguageCubit, Locale>(
         builder: (context, state) {
           return MaterialApp(
+            navigatorObservers: [routeObserver],
             localizationsDelegates: const [
               S.delegate,
               GlobalMaterialLocalizations.delegate,

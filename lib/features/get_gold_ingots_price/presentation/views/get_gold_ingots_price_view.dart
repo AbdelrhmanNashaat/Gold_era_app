@@ -1,4 +1,6 @@
+import 'package:calulate_gold_daily_price/features/get_gold_ingots_price/presentation/manager/get_gold_ingots_cubit/get_gold_ingots_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/get_gold_ingots_price_view_body.dart';
 
@@ -21,7 +23,12 @@ class GetGoldIngotsPriceView extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const SafeArea(child: GetGoldIngotsPriceViewBody()),
+      body: SafeArea(
+        child: BlocProvider(
+          create: (context) => GetGoldIngotsCubit()..fetchGoldIngotsPrice(),
+          child: const GetGoldIngotsPriceViewBody(),
+        ),
+      ),
     );
   }
 }

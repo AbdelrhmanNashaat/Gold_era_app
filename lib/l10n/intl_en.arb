@@ -18,5 +18,6 @@
   "AmountPaid": "Amount Paid",
   "enterAmountPaid": "Enter amount",
   "pleaseEnterValidNumber": "Please enter a valid number",
-  "NoTransactionsYet": "No Transactions Yet"
+  "NoTransactionsYet": "No Transactions Yet",
+  "MechanicalAndStamping": "Stamping"
 }

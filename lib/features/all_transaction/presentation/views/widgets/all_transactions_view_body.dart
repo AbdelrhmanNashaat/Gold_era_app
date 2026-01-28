@@ -118,7 +118,7 @@ class _AllTransactionsViewBodyState extends State<AllTransactionsViewBody> {
             (ingot) => TransactionModel(
               id: ingot.id.toString(),
               money: ingot.buyPrice.toString(),
-              weight: ingot.weight,
+              weight: ingot.grams.toString(),
               date: ingot.date,
             ),
           )

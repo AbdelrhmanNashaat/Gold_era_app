@@ -18,5 +18,6 @@
   "AmountPaid": "المبلغ المدفوع",
   "enterAmountPaid": "أدخل المبلغ",
   "pleaseEnterValidNumber": "يرجى إدخال رقم صالح",
-  "NoTransactionsYet": "لا توجد معاملات حتى الآن"
+  "NoTransactionsYet": "لا توجد معاملات حتى الآن",
+  "MechanicalAndStamping": "الدمغة"
 }

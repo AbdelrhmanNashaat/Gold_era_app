@@ -12,11 +12,13 @@ class GoldPortfolioWidget extends StatelessWidget {
     required this.weight,
     required this.totalPaid,
     required this.profit,
+    required this.mechanical,
   });
   final String currentValue;
   final String weight;
   final String totalPaid;
   final String profit;
+  final String mechanical;
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +48,8 @@ class GoldPortfolioWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.green,
                   ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 4),
                 Text(
@@ -80,11 +84,24 @@ class GoldPortfolioWidget extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          PortfolioInfoItem(
-            icon: FontAwesomeIcons.chartLine,
-            label: S.of(context).Profit,
-            value: "$profit ${S.of(context).EGP}".localizedNumber(context),
-            iconColor: Colors.green,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              PortfolioInfoItem(
+                icon: FontAwesomeIcons.chartLine,
+                label: S.of(context).Profit,
+                value: "$profit ${S.of(context).EGP}".localizedNumber(context),
+                iconColor: Colors.green,
+              ),
+              PortfolioInfoItem(
+                icon: FontAwesomeIcons.moneyBillTransfer,
+                label: S.of(context).MechanicalAndStamping,
+                value: "$mechanical ${S.of(context).EGP}".localizedNumber(
+                  context,
+                ),
+                iconColor: Colors.green,
+              ),
+            ],
           ),
         ],
       ),

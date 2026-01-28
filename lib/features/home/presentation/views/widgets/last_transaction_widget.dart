@@ -69,7 +69,7 @@ class LastTransactionWidget extends StatelessWidget {
                     text: "${transactions.weight} ${S.of(context).g}"
                         .localizedNumber(context),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
                   TransactionInfo(
                     icon: FontAwesomeIcons.calendarDays,
                     text: transactions.date,

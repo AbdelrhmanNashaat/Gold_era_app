@@ -27,7 +27,7 @@ class LanguageToggleWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  isEnglish ? 'EN' : 'AR',
+                  isEnglish ? 'EN' : 'العربية',
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(width: 8),

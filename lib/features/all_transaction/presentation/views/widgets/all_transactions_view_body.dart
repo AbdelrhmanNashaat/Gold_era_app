@@ -1,5 +1,6 @@
 import 'package:calulate_gold_daily_price/core/extensions/number_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../../../generated/l10n.dart';
@@ -71,13 +72,25 @@ class _AllTransactionsViewBodyState extends State<AllTransactionsViewBody> {
                 ? SliverFillRemaining(
                     hasScrollBody: false,
                     child: Center(
-                      child: Text(
-                        S.of(context).NoTransactionsYet,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w500,
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            FontAwesomeIcons.circleXmark,
+                            size: 80,
+                            color: Colors.blue[300],
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            S.of(context).NoTransactionsYet,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   )

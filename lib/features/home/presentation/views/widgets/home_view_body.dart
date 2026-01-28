@@ -15,7 +15,17 @@ class HomeViewBody extends StatefulWidget {
   State<HomeViewBody> createState() => _HomeViewBodyState();
 }
 
-class _HomeViewBodyState extends State<HomeViewBody> {
+class _HomeViewBodyState extends State<HomeViewBody> with RouteAware {
+  final GlobalKey<LatestLastTransactionsState> latestTransactionsKey =
+      GlobalKey();
+
+  @override
+  void didPopNext() {
+    // Refresh latest transactions when coming back
+    latestTransactionsKey.currentState?.refreshTransactions();
+    super.didPopNext();
+  }
+
   late Future<List<GoldTransaction>> transactions;
   @override
   void initState() {

@@ -9,7 +9,7 @@ class GetGoldIngotsPriceView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[100],
         iconTheme: const IconThemeData(color: Colors.purple),
         title: Text(
           S.of(context).GoldIngots,

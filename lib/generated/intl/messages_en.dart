@@ -49,9 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectGoldWeight": MessageLookupByLibrary.simpleMessage("Select gram"),
     "selectGoldWeightAndEnterAmountYouPaid":
-        MessageLookupByLibrary.simpleMessage(
-          "Select gold weight and enter the amount you paid",
-        ),
+        MessageLookupByLibrary.simpleMessage("Select gold weight"),
     "viewAll": MessageLookupByLibrary.simpleMessage("View all"),
   };
 }

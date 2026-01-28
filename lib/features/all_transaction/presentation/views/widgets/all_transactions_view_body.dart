@@ -26,7 +26,7 @@ class _AllTransactionsViewBodyState extends State<AllTransactionsViewBody> {
       id: '0',
       money: '2263.336',
       weight: '0.25',
-      date: '19 jan 2026',
+      date: '19 Jan 2026',
     ),
   );
 
@@ -85,7 +85,20 @@ class _AllTransactionsViewBodyState extends State<AllTransactionsViewBody> {
                     itemCount: displayTransactions.length,
                     itemBuilder: (context, index) {
                       final transaction = displayTransactions[index];
-                      return LastTransactionWidget(transactions: transaction);
+                      return LastTransactionWidget(
+                        transactions: transaction,
+                        onDelete: () async {
+                          // Delete from database
+                          await GoldDatabase.instance.deleteTransaction(
+                            int.parse(transaction.id),
+                          );
+
+                          // Remove locally
+                          setState(() {
+                            transactions.remove(transaction);
+                          });
+                        },
+                      );
                     },
                   ),
           ],
@@ -95,7 +108,7 @@ class _AllTransactionsViewBodyState extends State<AllTransactionsViewBody> {
   }
 
   Future<void> fetchTransactions() async {
-    await Future.delayed(const Duration(seconds: 2)); // simulate loading
+    await Future.delayed(const Duration(seconds: 1));
     List<GoldTransaction> goldIngots = await GoldDatabase.instance
         .getAllTransactions();
 

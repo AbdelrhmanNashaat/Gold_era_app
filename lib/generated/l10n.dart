@@ -139,10 +139,10 @@ class S {
     );
   }
 
-  /// `Select gold weight and enter the amount you paid`
+  /// `Select gold weight`
   String get selectGoldWeightAndEnterAmountYouPaid {
     return Intl.message(
-      'Select gold weight and enter the amount you paid',
+      'Select gold weight',
       name: 'selectGoldWeightAndEnterAmountYouPaid',
       desc: '',
       args: [],

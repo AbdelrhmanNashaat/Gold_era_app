@@ -10,27 +10,52 @@ class LatestLastTransactions extends StatefulWidget {
   const LatestLastTransactions({super.key});
 
   @override
-  State<LatestLastTransactions> createState() => _LatestLastTransactionsState();
+  State<LatestLastTransactions> createState() => LatestLastTransactionsState();
 }
 
-class _LatestLastTransactionsState extends State<LatestLastTransactions> {
+class LatestLastTransactionsState extends State<LatestLastTransactions> {
   List<TransactionModel> transactions = [];
   bool isLoading = true;
 
-  // Fake transactions for skeleton loading
   final List<TransactionModel> fakeTransactions = List.generate(
     3,
     (_) => TransactionModel(
       id: '0',
-      money: '2253.66',
+      money: '2263.336',
       weight: '0.25',
-      date: '19 Aug, 2026',
+      date: '19 Jan 2026',
     ),
   );
 
   @override
   void initState() {
     super.initState();
+    fetchTransactions();
+  }
+
+  Future<void> fetchTransactions() async {
+    setState(() => isLoading = true);
+    await Future.delayed(const Duration(seconds: 1));
+    List<GoldTransaction> goldIngots = await GoldDatabase.instance
+        .getAllTransactions();
+
+    setState(() {
+      transactions = goldIngots
+          .map(
+            (ingot) => TransactionModel(
+              id: ingot.id.toString(),
+              money: ingot.buyPrice.toString(),
+              weight: ingot.weight,
+              date: ingot.date,
+            ),
+          )
+          .toList();
+      isLoading = false;
+    });
+  }
+
+  // Public method to refresh from parent
+  void refreshTransactions() {
     fetchTransactions();
   }
 
@@ -58,33 +83,26 @@ class _LatestLastTransactionsState extends State<LatestLastTransactions> {
       child: ListView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemCount: displayTransactions.length,
+        itemCount: isLoading
+            ? fakeTransactions.length
+            : transactions.reversed.take(3).length,
         itemBuilder: (context, index) {
+          final transaction = isLoading
+              ? fakeTransactions[index]
+              : transactions.reversed.take(3).toList()[index];
           return LastTransactionWidget(
-            transactions: displayTransactions[index],
+            transactions: transaction,
+            onDelete: isLoading
+                ? null
+                : () async {
+                    await GoldDatabase.instance.deleteTransaction(
+                      int.parse(transaction.id),
+                    );
+                    setState(() => transactions.remove(transaction));
+                  },
           );
         },
       ),
     );
-  }
-
-  Future<void> fetchTransactions() async {
-    await Future.delayed(const Duration(seconds: 2)); // simulate loading
-    List<GoldTransaction> goldIngots = await GoldDatabase.instance
-        .getAllTransactions();
-
-    setState(() {
-      transactions = goldIngots
-          .map(
-            (ingot) => TransactionModel(
-              id: ingot.id.toString(),
-              money: ingot.buyPrice.toString(),
-              weight: ingot.weight,
-              date: ingot.date,
-            ),
-          )
-          .toList();
-      isLoading = false;
-    });
   }
 }

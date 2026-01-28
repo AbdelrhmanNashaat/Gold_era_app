@@ -1,7 +1,7 @@
 class GoldTransaction {
   final int? id;
   final String weight;
-  final double buyPrice;
+  final String buyPrice;
   final String date;
 
   GoldTransaction({

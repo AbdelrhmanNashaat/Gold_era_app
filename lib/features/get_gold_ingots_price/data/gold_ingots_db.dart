@@ -50,17 +50,6 @@ class GoldIngotsDb {
     return result.map((e) => GoldIngot.fromMap(e)).toList();
   }
 
-  Future<List<String>> getIngotTitles() async {
-    final db = await database;
-
-    final result = await db.query(
-      'gold_ingots',
-      columns: ['title'], // 👈 only this column
-    );
-
-    return result.map((e) => e['title'] as String).toList();
-  }
-
   Future<void> clearIngots() async {
     final db = await database;
     await db.delete('gold_ingots');

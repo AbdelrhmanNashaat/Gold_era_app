@@ -47,9 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectGoldWeight": MessageLookupByLibrary.simpleMessage("حدد الجرام"),
     "selectGoldWeightAndEnterAmountYouPaid":
-        MessageLookupByLibrary.simpleMessage(
-          "حدد وزن الذهب وأدخل المبلغ الذي دفعته",
-        ),
+        MessageLookupByLibrary.simpleMessage("حدد وزن الذهب"),
     "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
   };
 }
